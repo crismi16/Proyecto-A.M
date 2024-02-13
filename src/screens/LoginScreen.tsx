@@ -34,9 +34,9 @@ export const LoginScreen = ({navigation}:Props) => {
               value={password}
               placeholder="******"
             />
-            <ButtonComponent title='INICIAR SESIÓN' onPress={()=>navigation.navigate('RegisterScreen')}/>
+            <ButtonComponent title='INICIAR SESIÓN' onPress={()=>navigation.navigate('LoginScreen')}/>
             <ButtonComponent title='REGISTRARSE' onPress={()=>navigation.navigate('RegisterScreen')}/>
-            <ButtonComponent title='Olvidaste tu usuario o contraseña' onPress={()=>navigation.navigate('RegisterScreen')}/>
+            <ButtonComponent title='Olvidaste tu usuario o contraseña' onPress={()=>navigation.navigate('PasswordScreen')}/>
           </View>
         </ScrollView>
       </View>

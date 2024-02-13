@@ -1,7 +1,12 @@
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { ButtonComponent } from '../components/ButtonComponent';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigator/ProfileStackNavigator';
 
-export const RegisterScreen = () => {
+interface Props extends StackScreenProps<RootStackParamList,'RegisterScreen'>{};
+
+export const RegisterScreen = ({navigation}:Props) => {
 
   const [firstName, onChangeFirstName] = React.useState('');
   const [lastName, onChangeLastName] = React.useState('');
@@ -68,12 +73,8 @@ export const RegisterScreen = () => {
             value={confirm}
             placeholder="******"
           />
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.texto}>REGISTRAR</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.texto}>INICIAR SESIÓN</Text>
-          </TouchableOpacity>
+          <ButtonComponent title='REGISTRARSE' onPress={()=>navigation.navigate('RegisterScreen')}/>
+          <ButtonComponent title='INICIAR SESIÓN' onPress={()=>navigation.navigate('LoginScreen')}/>
       </View>
     </ScrollView>
   )

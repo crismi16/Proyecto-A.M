@@ -7,13 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { RegisterScreen } from '../screens/RegisterScreen';
 import { ProfileStackNavigator } from './ProfileStackNavigator';
 
-// export type RootStackParamList = {
-//     LoginScreen:undefined,
-//     RegisterScreen:undefined,
-//     Home:undefined,
-//     Products:undefined,
-// };
-
 const Tab = createBottomTabNavigator();
 
 export const BottomTabsNavigator = () => {
