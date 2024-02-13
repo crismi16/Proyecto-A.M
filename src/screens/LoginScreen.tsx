@@ -1,10 +1,15 @@
-import React from 'react'
+import { StackScreenProps } from '@react-navigation/stack';
+import React, { useState } from 'react'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { RootStackParamList } from '../navigator/ProfileStackNavigator';
+import { ButtonComponent } from '../components/ButtonComponent';
 
-export const LoginScreen = () => {
+interface Props extends StackScreenProps<RootStackParamList,'LoginScreen'>{};
 
-  const [user, onChangeUser] = React.useState('');
-  const [password, onChangePassword] = React.useState('');
+export const LoginScreen = ({navigation}:Props) => {
+
+  const [user, onChangeUser] = useState('');
+  const [password, onChangePassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -13,7 +18,7 @@ export const LoginScreen = () => {
           <View style={styles.container2}>
             <Image
               style={styles.logo}
-              source={require('../components/img/logo.png')}
+              source={require('../img/logo.png')}
             />
             <Text style={styles.texto}>Usuario:</Text>
             <TextInput
@@ -29,15 +34,9 @@ export const LoginScreen = () => {
               value={password}
               placeholder="******"
             />
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.texto}>INICIAR SESIÓN</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.texto}>REGISTRARSE</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.texto}>Olvidaste tu usuario o contraseña</Text>
-            </TouchableOpacity>
+            <ButtonComponent title='INICIAR SESIÓN' onPress={()=>navigation.navigate('RegisterScreen')}/>
+            <ButtonComponent title='REGISTRARSE' onPress={()=>navigation.navigate('RegisterScreen')}/>
+            <ButtonComponent title='Olvidaste tu usuario o contraseña' onPress={()=>navigation.navigate('RegisterScreen')}/>
           </View>
         </ScrollView>
       </View>

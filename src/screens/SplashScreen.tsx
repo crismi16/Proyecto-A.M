@@ -6,7 +6,7 @@ export const SplashScreen = () => {
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('../components/img/AppLaya.png')}
+        source={require('../img/AppLaya.png')}
       />
     </View>
   )

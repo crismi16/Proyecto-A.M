@@ -1,17 +1,11 @@
-import { SafeAreaView } from "react-native"
-import { LoginScreen } from "./screens/LoginScreen"
-import { RegisterScreen } from "./screens/RegisterScreen"
-import { PasswordScreen } from "./screens/PasswordScreen"
-import { SplashScreen } from "./screens/SplashScreen"
-
+import 'react-native-gesture-handler';
+import { NavigationContainer } from "@react-navigation/native"
+import { BottomTabsNavigator } from "./src/navigator/BottomTabsNavigator"
 
 export const App = () => {
   return (
-    <SafeAreaView style={{flex:1}}>
-      <LoginScreen/>
-      {/* <RegisterScreen/> */}
-      {/* <PasswordScreen/> */}
-      {/* <SplashScreen/> */}
-    </SafeAreaView>
+    <NavigationContainer>
+      <BottomTabsNavigator/>
+    </NavigationContainer>
   )
 }

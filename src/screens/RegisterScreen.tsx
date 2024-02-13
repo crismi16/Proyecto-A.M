@@ -16,7 +16,7 @@ export const RegisterScreen = () => {
       <View style={styles.container1}>
         <Image
             style={styles.logo}
-            source={require('../components/img/logo.png')}
+            source={require('../img/logo.png')}
           />
           <Text style={styles.texto}>Nombre:</Text>
           <TextInput
