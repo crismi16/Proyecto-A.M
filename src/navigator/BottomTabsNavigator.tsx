@@ -4,7 +4,6 @@ import { Home } from '../screens/Home';
 import { Products } from '../screens/Products';
 import { PRIMARY_COLOR } from '../commons/constantsColor';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { RegisterScreen } from '../screens/RegisterScreen';
 import { ProfileStackNavigator } from './ProfileStackNavigator';
 
 const Tab = createBottomTabNavigator();
