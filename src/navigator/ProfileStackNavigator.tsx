@@ -16,7 +16,7 @@ export const ProfileStackNavigator = () => {
     <Stack.Navigator initialRouteName='LoginScreen' screenOptions={{gestureEnabled:true}}>
       <Stack.Screen name="LoginScreen" options={{headerShown:false}} component={LoginScreen} />
       <Stack.Screen name="RegisterScreen" options={{headerShown:false}} component={RegisterScreen} />
-      <Stack.Screen name="RegisterScreen" options={{headerShown:false}} component={PasswordScreen} />
+      <Stack.Screen name="PasswordScreen" options={{headerShown:false}} component={PasswordScreen} />
     </Stack.Navigator>
   )
 }
