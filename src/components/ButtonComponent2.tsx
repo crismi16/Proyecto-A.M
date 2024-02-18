@@ -7,9 +7,9 @@ interface ButtonProps {
   onPress: () => void;
 }
 
-export const ButtonComponent = ({title, onPress}: ButtonProps) => {
+export const ButtonComponent2 = ({title, onPress}: ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+    <TouchableOpacity style={styles.buttonContainer2} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );

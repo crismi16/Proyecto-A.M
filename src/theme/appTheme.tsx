@@ -1,49 +1,59 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {PRIMARY_COLOR, SECONDARY_COLOR} from '../commons/constantsColor';
+import {PRIMARY_COLOR, SECONDARY_COLOR, TEXT_COLOR} from '../commons/constantsColor';
 
 export const styles = StyleSheet.create({
+  logo: {
+    height: 60,
+    width: '100%',
+    alignSelf:'center',
+    marginTop: 20,
+    resizeMode: 'contain',
+  },
   titleContainer: {
-    backgroundColor: PRIMARY_COLOR,
-    height: '12%',
+    backgroundColor: SECONDARY_COLOR,
+    // height: '12%',
     justifyContent: 'center',
     alignItems: 'center',
   },
   title: {
-    color: SECONDARY_COLOR,
+    color: TEXT_COLOR,
     fontSize: 27,
     fontWeight: 'bold',
   },
   bodyContainer: {
-    backgroundColor: SECONDARY_COLOR,
-    height: '88%',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
+    backgroundColor: PRIMARY_COLOR,
+    // alignItems: 'center',
+    padding:20,
   },
   inputContainer: {
     marginHorizontal: 10,
   },
   inputText: {
-    backgroundColor: PRIMARY_COLOR,
+    backgroundColor: TEXT_COLOR,
     fontWeight: 'bold',
     textAlign: 'center',
     paddingVertical: 12,
     paddingHorizontal:30,
     borderRadius: 10,
   },
-  buttonContainer: {
-    backgroundColor: PRIMARY_COLOR,
-    justifyContent: 'center',
-    alignItems: 'center',
+  buttonContainer2: {
+    backgroundColor: SECONDARY_COLOR,
     borderRadius: 10,
     paddingVertical: 15,
     paddingHorizontal:30,
     marginHorizontal: 10,
   },
+  buttonContainer: {
+    backgroundColor: SECONDARY_COLOR,
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal:30,
+    marginBottom:30,
+    alignSelf:'center',
+  },
   buttonText: {
-    color: SECONDARY_COLOR,
+    color: TEXT_COLOR,
     fontSize: 16,
     fontWeight: 'bold',
   },
@@ -52,16 +62,17 @@ export const styles = StyleSheet.create({
   },
   imagen: {
     width: '100%',
-    height: '80%',
-    resizeMode: 'contain',
+    height: 200,
+    resizeMode: 'cover',
+    marginBottom:30,
   },
   formContainer: {
     height: '100%',
     justifyContent: 'space-evenly',
   },
   result: {
-    color: SECONDARY_COLOR,
-    backgroundColor: PRIMARY_COLOR,
+    color: TEXT_COLOR,
+    backgroundColor: SECONDARY_COLOR,
     fontSize: 16,
     fontWeight: 'bold',
     paddingVertical: 15,
