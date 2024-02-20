@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 export const BottomTabsNavigator = () => {
   return (
-    <Tab.Navigator initialRouteName='ProductsStackNavigator' 
+    <Tab.Navigator initialRouteName='HomeStackNavigator' 
       screenOptions={{tabBarActiveTintColor: SECONDARY_COLOR, tabBarStyle: {backgroundColor:'black'},}}>
       <Tab.Screen name="HomeStackNavigator" options={{tabBarLabel: 'Inicio',headerShown:false, tabBarIcon: ({ color, size }) => (
             <Icon name="home" color={color} size={size} />
