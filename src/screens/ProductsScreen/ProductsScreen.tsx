@@ -43,7 +43,7 @@ export const ProductsScreen = ({navigation}:Props) => {
               <ButtonImageComponent
                 title="Galletas"
                 pathImage='https://cdn0.recetasgratis.net/es/posts/6/8/2/galletas_de_mantequilla_con_chocolate_55286_600.webp'
-                onPress={() => navigation.navigate('ProductsScreen')}
+                onPress={() => navigation.navigate('CookieScreen')}
               />
             </View>
             <View style={stylesI.image}>
