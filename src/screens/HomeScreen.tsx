@@ -1,17 +1,16 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import {Image} from 'react-native';
-import {BodyComponent} from '../components/BodyComponent';
-import {ButtonComponent} from '../components/ButtonComponent';
 import {StackScreenProps} from '@react-navigation/stack';
-import {RootStackParamList} from '../navigator/HomeStackNavigator';
+import {BodyComponent} from '../components/BodyComponent';
+import { ButtonComponent } from '../components/ButtonComponent';
 import {styles} from '../theme/appTheme';
-import {ButtonComponent2} from '../components/ButtonComponent2';
-import {TEXT_COLOR} from '../commons/constantsColor';
+import { RootBottomTabParamList } from '../navigator/BottomTabsNavigator';
 
-interface Props extends StackScreenProps<RootStackParamList, 'Home'> {}
 
-export const Home = ({navigation}: Props) => {
+interface Props extends StackScreenProps<RootBottomTabParamList,'HomeStackNavigator'>{};
+
+export const HomeScreen = ({navigation}: Props) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -22,11 +21,11 @@ export const Home = ({navigation}: Props) => {
           }}
         />
         <BodyComponent>
-          <View style={stylesI.title}>
-            <Text style={stylesI.textStart}>Bienvenidos</Text>
+          <View style={styles.titleContainer}>
+            <Text style={styles.textStart}>Bienvenidos</Text>
             <ButtonComponent
               title="Ver productos"
-              onPress={() => navigation.navigate('Home')}
+              onPress={() => navigation.navigate('ProductsStackNavigator')}
             />
           </View>
           <Image
@@ -37,7 +36,7 @@ export const Home = ({navigation}: Props) => {
           />
           <ButtonComponent
             title="Ver pasteles"
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('ProductsStackNavigator')}
           />
           <Image
             style={styles.imagen}
@@ -47,7 +46,7 @@ export const Home = ({navigation}: Props) => {
           />
           <ButtonComponent
             title="Ver galletas"
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('ProductsStackNavigator')}
           />
           <Image
             style={styles.imagen}
@@ -57,16 +56,16 @@ export const Home = ({navigation}: Props) => {
           />
           <ButtonComponent
             title="Ver helados"
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('ProductsStackNavigator')}
           />
-          <Text style={stylesI.textStart}>Promociones</Text>
-          <TouchableOpacity>
-          <Image
-            style={stylesI.imagen}
-            source={{
-              uri: 'https://scontent.fltx1-1.fna.fbcdn.net/v/t1.6435-9/151216467_3934503526596040_5289146551186166554_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeE6P_xaMgNwvO2P0MmfZJTQRlI4JKjEVMRGUjgkqMRUxLbYCWC6iG6hZlotvmf7ey_uB02rmCdpQnEyM4Xp3wgV&_nc_ohc=clS5BWwxcUQAX9Zored&_nc_ht=scontent.fltx1-1.fna&oh=00_AfBpsz7OmIUGaT7qYDGNXa0EsJVtxakDPiGU_56A4-Lv9w&oe=65F99D98',
-            }}
-          />
+          <Text style={styles.textStart}>Promociones</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('ProductsStackNavigator')}>
+            <Image
+              style={stylesI.imagePromo}
+              source={{
+                uri: 'https://scontent.fltx1-1.fna.fbcdn.net/v/t1.6435-9/151216467_3934503526596040_5289146551186166554_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeE6P_xaMgNwvO2P0MmfZJTQRlI4JKjEVMRGUjgkqMRUxLbYCWC6iG6hZlotvmf7ey_uB02rmCdpQnEyM4Xp3wgV&_nc_ohc=clS5BWwxcUQAX9Zored&_nc_ht=scontent.fltx1-1.fna&oh=00_AfBpsz7OmIUGaT7qYDGNXa0EsJVtxakDPiGU_56A4-Lv9w&oe=65F99D98',
+              }}
+            />
           </TouchableOpacity>
         </BodyComponent>
       </View>
@@ -75,21 +74,10 @@ export const Home = ({navigation}: Props) => {
 };
 
 const stylesI = StyleSheet.create({
-  title: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  textStart: {
-    color: TEXT_COLOR,
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 30,
-  },
-  imagen: {
+  imagePromo: {
     width: '100%',
     height: 350,
     resizeMode: 'cover',
-    marginBottom:20,
+    marginBottom:10,
   },
 });

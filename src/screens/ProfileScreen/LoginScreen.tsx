@@ -1,8 +1,8 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useState } from 'react'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { RootStackParamList } from '../navigator/ProfileStackNavigator';
-import { ButtonComponent } from '../components/ButtonComponent';
+import { RootStackParamList } from '../../navigator/ProfileStackNavigator';
+import { ButtonComponent } from '../../components/ButtonComponent';
 
 interface Props extends StackScreenProps<RootStackParamList,'LoginScreen'>{};
 
@@ -18,7 +18,7 @@ export const LoginScreen = ({navigation}:Props) => {
           <View style={styles.container2}>
             <Image
               style={styles.logo}
-              source={require('../img/logo.png')}
+              source={require('../../img/logo.png')}
             />
             <Text style={styles.texto}>Usuario:</Text>
             <TextInput

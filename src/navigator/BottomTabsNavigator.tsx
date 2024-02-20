@@ -5,11 +5,17 @@ import { HomeStackNavigator } from './HomeStackNavigator';
 import { ProductsStackNavigator } from './ProductsStackNavigator';
 import { ProfileStackNavigator } from './ProfileStackNavigator';
 
+export type RootBottomTabParamList = {
+  HomeStackNavigator: undefined;
+  ProductsStackNavigator: undefined;
+  ProfileStackNavigator: undefined;
+};
+
 const Tab = createBottomTabNavigator();
 
 export const BottomTabsNavigator = () => {
   return (
-    <Tab.Navigator initialRouteName='HomeStackNavigator' 
+    <Tab.Navigator initialRouteName='ProductsStackNavigator' 
       screenOptions={{tabBarActiveTintColor: SECONDARY_COLOR, tabBarStyle: {backgroundColor:'black'},}}>
       <Tab.Screen name="HomeStackNavigator" options={{tabBarLabel: 'Inicio',headerShown:false, tabBarIcon: ({ color, size }) => (
             <Icon name="home" color={color} size={size} />

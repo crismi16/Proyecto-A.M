@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { ButtonComponent } from '../components/ButtonComponent';
+import { ButtonComponent } from '../../components/ButtonComponent';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigator/ProfileStackNavigator';
+import { RootStackParamList } from '../../navigator/ProfileStackNavigator';
 
 interface Props extends StackScreenProps<RootStackParamList,'RegisterScreen'>{};
 
@@ -21,7 +21,7 @@ export const RegisterScreen = ({navigation}:Props) => {
       <View style={styles.container1}>
         <Image
             style={styles.logo}
-            source={require('../img/logo.png')}
+            source={require('../../img/logo.png')}
           />
           <Text style={styles.texto}>Nombre:</Text>
           <TextInput

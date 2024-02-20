@@ -1,16 +1,19 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { Products } from '../screens/Products';
+import { ProductsScreen } from '../screens/ProductsScreen/ProductsScreen';
+import { CakeScreen } from '../screens/ProductsScreen/CakeScreen';
 
 export type RootStackParamList = {
-    Products: undefined;
+  ProductsScreen: undefined;
+  CakeScreen: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 export const ProductsStackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Products" screenOptions={{gestureEnabled: true}}>
-      <Stack.Screen name="Products" options={{headerShown: false}} component={Products}/>
+    <Stack.Navigator initialRouteName="ProductsScreen" screenOptions={{gestureEnabled: true}}>
+      <Stack.Screen name="ProductsScreen" options={{headerShown: false}} component={ProductsScreen}/>
+      <Stack.Screen name="CakeScreen" options={{headerShown: false}} component={CakeScreen}/>
     </Stack.Navigator>
   )
 }
